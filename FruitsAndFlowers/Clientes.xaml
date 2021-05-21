@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitsAndFlowers.Clientes" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Lista de clientes" FontSize="20" HorizontalTextAlignment="Center" Padding="20"/>
+            <Grid RowSpacing="10" ColumnSpacing="10" Padding="10" BackgroundColor="LightSkyBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0"  x:Name="btnInsertaCliente" Text="Nuevo" FontSize="12"  BackgroundColor="White" Clicked="btnInsertaCliente_Clicked" />
+              
+
+            </Grid>
+
+            <ListView x:Name="listaClientesView" IsPullToRefreshEnabled="True" Margin="4" ItemSelected="listaClientesView_ItemSelected">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            
+                            <StackLayout >
+                                
+                                <Grid RowSpacing="10" ColumnSpacing="10" Padding="10" BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                       
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label Grid.Row="0" Grid.Column="0" x:Name="lbCedCli" Text="{Binding ced_cli}"  TextColor="Black"/>
+                                    <Label Grid.Row="0" Grid.Column="1" x:Name="lbNomCli" Text="{Binding nom_cli}" TextColor="Black"/>
+                                    <Label Grid.Row="0" Grid.Column="2" x:Name="lbApeCli" Text="{Binding ape_cli}" TextColor="Black"/>
+                                   
+                                </Grid>
+                               
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

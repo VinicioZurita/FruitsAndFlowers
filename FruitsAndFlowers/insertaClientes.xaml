@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitsAndFlowers.insertaClientes" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+
+            <Entry x:Name="txtCedula" Placeholder="Ingrese la Cedula" MaxLength="10" Keyboard="Telephone"></Entry>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese los Nombres" ></Entry>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese los Apellidos" ></Entry>
+            <Entry x:Name="txtDireccion" Placeholder="Ingrese la Direccion" ></Entry>
+            <Entry x:Name="txtTelefono" Placeholder="Ingrese el Celular" MaxLength="10" Keyboard="Telephone"></Entry>
+        
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition> </ColumnDefinition>
+                    <ColumnDefinition> </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnIngresar" Text="Insertar Cliente" Clicked="btnIngresar_Clicked"></Button>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnRegresar" Text="volver" Clicked="btnRegresar_Clicked" ></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
